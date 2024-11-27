@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5001/api/v1';
+const API_BASE_URL = import.meta.env.REACT_APP_API_BASE_URL;
+console.log(API_BASE_URL);
 
 export const registerUser = (userData) => {
     return axios.post(`${API_BASE_URL}/users/register`, userData);
